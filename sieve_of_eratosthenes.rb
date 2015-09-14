@@ -20,5 +20,6 @@ def sieve_of_eratosthenes(top)
 		i += 1
 	end
 
-	return primes
+	primes.delete_if { |k, v| !v }
+	return primes.keys
 end
