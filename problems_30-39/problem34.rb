@@ -41,18 +41,3 @@ def get_digits(num)
 end
 
 p problem34
-
-
-# p FACT
-#
-# good_nums = []
-# (1..7).each do |num_length|
-#   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].permutation(num_length).to_a.each do |digits|
-#     current_num = digits.join("").to_i
-#     fact_sum = digits.inject(0) { |sum, digit| sum + FACT[digit] }
-#     good_nums << current_num if current_num == fact_sum
-#   end
-# end
-#
-# p good_nums
-# p good_nums.inject(:+)

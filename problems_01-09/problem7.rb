@@ -8,7 +8,7 @@ def prime_num(how_many_primes)
 	test = 2+1
 
 	while primes.length < how_many_primes
-		if primes.all? {|prime| test%prime != 0}
+		if primes.all? { |prime| test % prime != 0}
 			primes << test
 		end
 		test += 1

@@ -1,4 +1,4 @@
-# What is the smallest positive number 
+# What is the smallest positive number
 # that is evenly divisible by all of the numbers from 1 to 20?
 
 def is_factor?(numb,factor)
@@ -6,6 +6,7 @@ def is_factor?(numb,factor)
 	return false
 end
 
+# best case O(log(n)), worst case O(n)
 def find_prime_factors(numb)
 	factors = []
 
@@ -77,13 +78,3 @@ p first_how_many(20)
 # end
 
 # p cheap_way(18)
-
-
-
-
-
-
-
-
-
-
