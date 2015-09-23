@@ -9,13 +9,14 @@ def get_digits(num)
 end
 
 # efficient alogrithm for finding all primes below a certain number
-def sieve_of_eratosthenes(top)
+def sieve_of_eratosthenes_hash(top)
 	primes = {}
-	i = 2
+	i = 1
 	while i <= top
 		primes[i] = true
 		i += 1
 	end
+  primes[1] = false
 	i = 2
 	while i < top
 		if primes[i] == true
@@ -27,8 +28,10 @@ def sieve_of_eratosthenes(top)
 		end
 		i += 1
 	end
-	primes.delete_if { |k, v| !v }
-	return primes.keys
+	primes
+end
+def sieve_of_eratosthenes(top)
+  sieve_of_eratosthenes_hash(top).delete_if { |k, v| !v }.keys
 end
 
 # finds all prime factors of a number
@@ -88,4 +91,9 @@ def lcm(n,m)
 	end
 	all_factors = longer + shorter
 	all_factors.inject(:*)
+end
+
+def factorial(n)
+  raise "factorial must take an integer, 0 or greater" if n < 0
+  (1..n).inject(:*)
 end
