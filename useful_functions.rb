@@ -56,7 +56,7 @@ def is_factor?(numb, factor)
 	return false
 end
 
-# this will take some time to find all the primes. once we find them, we at most will be doing O(log(num)) operations. The limiting factor is the seive. time complexity = O(sieve_of_eratosthenes(num ** 1/2))
+# this will take some time to find all the primes. once we find them, we at most will be doing O(num^(1/2)/log(num)) operations (ie the number of primes less than or equal to the square root of our num. the number of primes that come out of the sieve). The limiting factor is the seive. time complexity = O(sieve_of_eratosthenes(num ** 1/2))
 def find_prime_factors(num)
   primes = sieve_of_eratosthenes(Math.sqrt(num)) # bottle neck is here
   factors = []
