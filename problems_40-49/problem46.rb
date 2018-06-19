@@ -10,7 +10,7 @@
 # It turns out that the conjecture was false.
 #
 # What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
-require_relative "./useful_functions.rb"
+require_relative "../useful_functions.rb"
 MAX_TESTED = 1000000
 primes = sieve_of_eratosthenes(MAX_TESTED + 1)
 squares = (0..Math.sqrt(MAX_TESTED)).to_a.map { |num| num ** 2 }

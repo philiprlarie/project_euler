@@ -11,7 +11,7 @@
 #
 # Find the first four consecutive integers to have four distinct prime factors. What is the first of these numbers?
 
-require_relative "./useful_functions.rb"
+require_relative "../useful_functions.rb"
 
 PRIMES = sieve_of_eratosthenes(1000000)
 
